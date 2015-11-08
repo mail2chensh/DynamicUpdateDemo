@@ -15,6 +15,7 @@
 		50598AFF1BEFA0B500B61157 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50598AFD1BEFA0B500B61157 /* LaunchScreen.storyboard */; };
 		50598B0A1BEFA0B500B61157 /* DynamicUpdateDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 50598B091BEFA0B500B61157 /* DynamicUpdateDemoTests.m */; };
 		50598B151BEFA0B500B61157 /* DynamicUpdateDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 50598B141BEFA0B500B61157 /* DynamicUpdateDemoUITests.m */; };
+		50598B581BEFA68F00B61157 /* Module.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 50598B4C1BEFA13500B61157 /* Module.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,7 +33,41 @@
 			remoteGlobalIDString = 50598AEB1BEFA0B500B61157;
 			remoteInfo = DynamicUpdateDemo;
 		};
+		50598B4B1BEFA13500B61157 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 50598B461BEFA13400B61157 /* Module.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 50598B2C1BEFA13400B61157;
+			remoteInfo = Module;
+		};
+		50598B4D1BEFA13500B61157 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 50598B461BEFA13400B61157 /* Module.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 50598B361BEFA13400B61157;
+			remoteInfo = ModuleTests;
+		};
+		50598B551BEFA5FC00B61157 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 50598B461BEFA13400B61157 /* Module.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 50598B2B1BEFA13400B61157;
+			remoteInfo = Module;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		50598B571BEFA65C00B61157 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 1;
+			files = (
+				50598B581BEFA68F00B61157 /* Module.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		50598AEC1BEFA0B500B61157 /* DynamicUpdateDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DynamicUpdateDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -51,6 +86,7 @@
 		50598B101BEFA0B500B61157 /* DynamicUpdateDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DynamicUpdateDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		50598B141BEFA0B500B61157 /* DynamicUpdateDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DynamicUpdateDemoUITests.m; sourceTree = "<group>"; };
 		50598B161BEFA0B500B61157 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		50598B461BEFA13400B61157 /* Module.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Module.xcodeproj; path = Module/Module.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +145,7 @@
 				50598AFB1BEFA0B500B61157 /* Assets.xcassets */,
 				50598AFD1BEFA0B500B61157 /* LaunchScreen.storyboard */,
 				50598B001BEFA0B500B61157 /* Info.plist */,
+				50598B461BEFA13400B61157 /* Module.xcodeproj */,
 				50598AEF1BEFA0B500B61157 /* Supporting Files */,
 			);
 			path = DynamicUpdateDemo;
@@ -140,6 +177,15 @@
 			path = DynamicUpdateDemoUITests;
 			sourceTree = "<group>";
 		};
+		50598B471BEFA13400B61157 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				50598B4C1BEFA13500B61157 /* Module.framework */,
+				50598B4E1BEFA13500B61157 /* ModuleTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -150,10 +196,12 @@
 				50598AE81BEFA0B500B61157 /* Sources */,
 				50598AE91BEFA0B500B61157 /* Frameworks */,
 				50598AEA1BEFA0B500B61157 /* Resources */,
+				50598B571BEFA65C00B61157 /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				50598B561BEFA5FC00B61157 /* PBXTargetDependency */,
 			);
 			name = DynamicUpdateDemo;
 			productName = DynamicUpdateDemo;
@@ -229,6 +277,12 @@
 			mainGroup = 50598AE31BEFA0B500B61157;
 			productRefGroup = 50598AED1BEFA0B500B61157 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 50598B471BEFA13400B61157 /* Products */;
+					ProjectRef = 50598B461BEFA13400B61157 /* Module.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				50598AEB1BEFA0B500B61157 /* DynamicUpdateDemo */,
@@ -237,6 +291,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		50598B4C1BEFA13500B61157 /* Module.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Module.framework;
+			remoteRef = 50598B4B1BEFA13500B61157 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		50598B4E1BEFA13500B61157 /* ModuleTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ModuleTests.xctest;
+			remoteRef = 50598B4D1BEFA13500B61157 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		50598AEA1BEFA0B500B61157 /* Resources */ = {
@@ -304,6 +375,11 @@
 			isa = PBXTargetDependency;
 			target = 50598AEB1BEFA0B500B61157 /* DynamicUpdateDemo */;
 			targetProxy = 50598B111BEFA0B500B61157 /* PBXContainerItemProxy */;
+		};
+		50598B561BEFA5FC00B61157 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Module;
+			targetProxy = 50598B551BEFA5FC00B61157 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
